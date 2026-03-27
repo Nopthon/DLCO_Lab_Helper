@@ -1,0 +1,51 @@
+site_name: DLCO Lab Helper
+
+theme:
+  name: material
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      primary: deep purple
+      accent: purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: deep purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+extra_css:
+  - stylesheets/extra.css
+  - https://fonts.loli.net/css?family=JetBrains Mono:400,500,600,700&display=swap
+  - https://cdn.staticfile.org/lxgw-wenkai-webfont/1.6.0/lxgwwenkai-regular.css
+  - https://cdn.staticfile.org/lxgw-wenkai-webfont/1.6.0/lxgwwenkaimono-bold.css
+
+nav: 
+  - Intro: index.md
+  - Lab0: lab0.md
+  - Lab1: lab1.md
+  - Lab2: lab2.md
+  - Lab3: lab3.md
+  - Lab4: lab4.md
+  - Lab5: lab5.md
+  - Lab6: lab6.md
+  - Brief Logisim Helper: Logisim_Helper.md

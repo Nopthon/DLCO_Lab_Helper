@@ -1,0 +1,21 @@
+body {
+    font-family: "LXGW WenKai", "JetBrains Mono";
+}
+
+:root {
+    --md-text-font: "JetBrains Mono", "LXGW WenKai"; 
+    --md-code-font: "JetBrains Mono", "LXGW WenKai";
+}
+
+:root > * {
+    --md-code-hl-comment-color: #38b228;
+}
+
+.md-typeset .admonition, .md-typeset details {
+    font-size: .7rem;
+}
+
+.katex .mord.text,
+.katex .text .mord {
+    font-family: "KaTeX_Main, LXGW WenKai", "JetBrains Mono", sans-serif;
+}
