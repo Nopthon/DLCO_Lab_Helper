@@ -27,6 +27,8 @@ theme:
         icon: material/brightness-4
         name: Switch to system preference
 
+repo_url: https://github.com/Nopthon/DLCO_Lab_Helper
+repo_name: DLCO_helper repo
 
 markdown_extensions:
   - admonition
@@ -48,4 +50,4 @@ nav:
   - Lab4: lab4.md
   - Lab5: lab5.md
   - Lab6: lab6.md
-  - Brief Logisim Helper: Logisim_Helper.md
+  - Fake Logisim Helper: Logisim_Helper.md

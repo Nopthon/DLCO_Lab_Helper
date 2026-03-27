@@ -1,4 +1,4 @@
-# DLCO Lab Helper
+# A bRIEF Lo🐔sim Jiaoxue
 
 欢迎回到 Logisim！
 
