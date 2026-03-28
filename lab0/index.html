@@ -642,8 +642,9 @@
 </ol>
 <p>对于 DLCO 这门课，你应该<strong><u>选择第二个版本</u></strong>，选择正确的版本对你在本地调试有很大的帮助（这三个版本的 .circ 文件不完全互通，<del>你也不希望自己在本地连好的实验在评测机上打不开吧嘿嘿</del>）。</p>
 <p>具体来说，实训平台用的是 <a href="https://github.com/Logisim-Ita/Logisim/releases/tag/v2.16.1.3">v2.16.1.3</a> 的版本，个人建议使用最新的 <a href="https://github.com/Logisim-Ita/Logisim/releases/tag/v2.16.2.2">v2.16.2.2</a> 版本或者在线平台的 <a href="https://github.com/Logisim-Ita/Logisim/releases/tag/v2.16.1.3">v2.16.1.3</a> 版本，否则后期遇到锁存器和触发器时可能会遇到一些问题（？）</p>
+<hr>
 <h2 id="logisim-tips">Logisim Tips</h2>
-<p><strong>Logisim 缺乏友好的新手教程，在此推荐 <a href="https://soc.ustc.edu.cn/Digital/2025/lab0/logisim/">Logisim 使用教程 - Digital Lab 2025</a></strong></p>
+<p>**Logisim 缺乏友好的新手教程，在此推荐 <a href="https://soc.ustc.edu.cn/COD/other/logisim/">Logisim 教程 - COD Lab 2026</a></p>
 <p>往届的助教也整理过一些常见问题（虽然有段时间没有维护了）：<a href="https://nju-dl-co-ta.github.io/DLCOdoc/problems/">常见问题 · 课内实验操作说明</a></p>
 <p>如果你已经是一个 Logisim 大神了（！？强强？！），<a href="https://www.cs.cornell.edu/courses/cs3410/2019sp/logisim/logisim_design.html">CS 3410 Design Guidelines for Logisim: Bad Practices to Avoid</a> 这个 Guideline 可能对你的大型工程构建有帮助</p>
 <p>除此以外，以下给出一些其他比较好用的小 Tips，或许可以减少在 Logisim 上消耗的时间：</p>
@@ -654,7 +655,10 @@
 </ul>
 </li>
 </ul>
+<details class="abstract">
+<summary>动图</summary>
 <p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/tip1.webp" data-desc-position="bottom"><img alt="tip1" src="../images/tip1.webp"></a></p>
+</details>
 <hr>
 <ul>
 <li>选中逻辑门再按下数字键可以切换逻辑门的<strong>输入位宽</strong>（在放置元件时该操作也有效，并且之后放置的门都遵循该设置）；同理可以改变的有“常量”的值（不是位宽）、复用器的<strong>选择端位宽</strong></li>
@@ -664,12 +668,18 @@
 <blockquote>
 <p>最好自己试一试，以防你分不清按不按住 <code>Alt</code> 分别修改的是什么值，以及理解这一条 Tip 在说什么</p>
 </blockquote>
+<details class="abstract">
+<summary>动图</summary>
 <p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/tip2.webp" data-desc-position="bottom"><img alt="tip2" src="../images/tip2.webp"></a></p>
+</details>
 <hr>
 <ul>
 <li>放置输入输出引脚后（并且正确为引脚命名），点击 “工程→分析组合逻辑电路” ，可以通过编辑真值表 / 输入逻辑表达式的方式自动生成组合逻辑电路</li>
 </ul>
+<details class="abstract">
+<summary>动图</summary>
 <p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/tip3.webp" data-desc-position="bottom"><img alt="tip3" src="../images/tip3.webp"></a></p>
+</details>
 <hr>
 <ul>
 <li>如果需要跨文件复制电路，可以点击 “工程→加载库→Logisim库” 导入.circ文件，以整体封装的形式使用电路，也可以在导入后对整个电路复制粘贴（如果你不希望后续的实验存在过多的子电路文件依赖，我建议对整个电路复制粘贴，否则使用封装电路更加简洁）</li>
@@ -682,7 +692,10 @@
 </ul>
 </li>
 </ul>
+<details class="abstract">
+<summary>动图</summary>
 <p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/tip5.webp" data-desc-position="bottom"><img alt="tip5" src="../images/tip5.webp"></a></p>
+</details>
 <hr>
 <ul>
 <li>选中元件按方向键可以修改元件朝向（多选元件按方向键也有效，但是电线不会相应旋转）</li>
@@ -692,18 +705,41 @@
 <ul>
 <li>一次 <code>Ctrl+D</code> 操作（复制+粘贴）可以代替一轮 <code>Ctrl+CV</code> 操作</li>
 </ul>
+<details class="abstract">
+<summary>动图</summary>
 <p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/tip7.webp" data-desc-position="bottom"><img alt="tip7" src="../images/tip7.webp"></a></p>
+</details>
 <hr>
 <ul>
-<li>Logisim 会主动连接端口，即使之后被分开也会尝试用电线主动连接</li>
+<li>Logisim 会主动连接端口，即使之后被分开也会尝试保持电路连接<ul>
+<li>如果你不希望自动连接，<strong>按住 Shift</strong> 并释放左键可以不自动连接（这在你不小心把电路缠在一块的时候很好用）</li>
+<li>在“偏好设置 → 电路编辑器”中，可以关闭自动连接的功能</li>
 </ul>
-<p>（猜猜我为什么要放这个动图 🤓）</p>
+</li>
+</ul>
+<details class="abstract">
+<summary>动图</summary>
 <p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/tip8.webp" data-desc-position="bottom"><img alt="tip8" src="../images/tip8.webp"></a></p>
+</details>
+<hr>
+<ul>
+<li>按住 Alt 键，在编辑模式下可以不依赖元件放置电线<ul>
+<li>并且你还会发现，按下 Alt 后对电线的处理逻辑不太一样（从新拉电线变成了移动最小段的电线）</li>
+</ul>
+</li>
+</ul>
+<details class="abstract">
+<summary>动图</summary>
+<p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/tip10.webp" data-desc-position="bottom"><img alt="tip9" src="../images/tip10.webp"></a></p>
+</details>
 <hr>
 <ul>
 <li>这个软件其实是有 Graphics Acceleration 的，可以在这个地方设置图形加速</li>
 </ul>
-<p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/image-20260327224011527.png" data-desc-position="bottom"><img alt="image-20260327224011527" src="../images/image-20260327224011527.png"></a></p>
+<details class="abstract">
+<summary>静图</summary>
+<p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/image-20260327224011527.png" data-desc-position="bottom"><img alt="tip10" src="../images/image-20260327224011527.png"></a></p>
+</details>
 <hr>
 <ul>
 <li>你可能很好奇，为什么我上面的截图中没有网格点<ul>
@@ -711,7 +747,11 @@
 </ul>
 </li>
 </ul>
-<p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/image-20260327225355878.png" data-desc-position="bottom"><img alt="image-20260327225355878" src="../images/image-20260327225355878.png"></a></p>
+<details class="abstract">
+<summary>静图</summary>
+<p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/image-20260327225355878.png" data-desc-position="bottom"><img alt="tip11" src="../images/image-20260327225355878.png"></a></p>
+</details>
+<hr>
 <h2 id="logisim_1">Logisim 电路排查指南</h2>
 <p>你可以按照以下步骤排查你的电路是否有问题（<del>以及是你的问题还是 Logisim 的问题</del>）：</p>
 <ol>
