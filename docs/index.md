@@ -60,6 +60,10 @@
     Report 📃: 实验 1 实验报告 **尚未开始提交**
     
     （为了减少不必要的误解，所有的 DDL 都会以 23:59 作为截止时刻）
+    
+    （目前只维护了 yry 班级的 DDL，对于其他班的同学表示土下座。。）
+    
+    （你知道吗，上面的倒计时会随着 DDL 临近而逐渐变红）
 
 <script>
 (function() {
@@ -67,7 +71,7 @@
         const r1 = parseInt(color1.slice(1, 3), 16);
         const g1 = parseInt(color1.slice(3, 5), 16);
         const b1 = parseInt(color1.slice(5, 7), 16);
-        
+
         const r2 = parseInt(color2.slice(1, 3), 16);
         const g2 = parseInt(color2.slice(3, 5), 16);
         const b2 = parseInt(color2.slice(5, 7), 16);
@@ -183,4 +187,3 @@
     setInterval(updateAllCountdowns, 1000);
 })();
 </script>
-

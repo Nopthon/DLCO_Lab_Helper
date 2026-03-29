@@ -1,10 +1,12 @@
-# A bRIEF Lo🐔sim Jiaoxue
+# 🅰️ bRIEF Lo🐔sim JiaOxüe
+
+> 4.1 特供版
 
 欢迎回到 Logisim！
 
 现在将进行玩法教学
 
-![image-20260327010557787](images/image-20260327010557787.png)
+![b4ca65594f807232db8bc8deb43d27ce](images/b4ca65594f807232db8bc8deb43d27ce.png)
 
 位于左侧的元件栏可以任意采购元件，左键可以放置单个元件，**按住 Ctrl/Shift + 右键可以放置多个元件**
 
@@ -14,9 +16,9 @@
 
 ![image-20260327011006656](images/image-20260327011006656.png)
 
-因为 Logisim 的神秘渲染特性，电线可能会进行移动，变色，还会显现，消失（这个时候重启 Logisim 可以解决问题）
+因为 Logisim 的神秘渲染特性，<del>判定线</del>电线可能会进行移动，变色，还会显现，消失（这个时候重启 Logisim 可以解决问题）
 
-![image-20260327012116784](images/image-20260327012116784.png)
+![image-20260328170908577](images/image-20260328170908577.png)
 
 让我们把所有元素综合在一起！
 
