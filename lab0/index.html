@@ -335,6 +335,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        在实训平台和本地之间传递文件
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#logisim-tips" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -589,6 +600,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        在实训平台和本地之间传递文件
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#logisim-tips" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -643,25 +665,36 @@
 <p>对于 DLCO 这门课，你应该<strong><u>选择第二个版本</u></strong>，选择正确的版本对你在本地调试有很大的帮助（这三个版本的 .circ 文件不完全互通，<del>你也不希望自己在本地连好的实验在评测机上打不开吧嘿嘿</del>）。</p>
 <p>具体来说，实训平台用的是 <a href="https://github.com/Logisim-Ita/Logisim/releases/tag/v2.16.1.3">v2.16.1.3</a> 的版本，个人建议使用最新的 <a href="https://github.com/Logisim-Ita/Logisim/releases/tag/v2.16.2.2">v2.16.2.2</a> 版本或者在线平台的 <a href="https://github.com/Logisim-Ita/Logisim/releases/tag/v2.16.1.3">v2.16.1.3</a> 版本，否则后期遇到锁存器和触发器时可能会遇到一些问题（？）</p>
 <hr>
+<h2 id="_1">在实训平台和本地之间传递文件</h2>
+<p>注意到这里的工具箱了吗</p>
+<p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/image-20260329140357141.png" data-desc-position="bottom"><img alt="image-20260329140357141" src="../images/image-20260329140357141.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/image-20260329140522904.png" data-desc-position="bottom"><img alt="image-20260329140522904" src="../images/image-20260329140522904.png"></a></p>
+<p>剩下的你都懂了</p>
+<hr>
 <h2 id="logisim-tips">Logisim Tips</h2>
-<p>**Logisim 缺乏友好的新手教程，在此推荐 <a href="https://soc.ustc.edu.cn/COD/other/logisim/">Logisim 教程 - COD Lab 2026</a></p>
-<p>往届的助教也整理过一些常见问题（虽然有段时间没有维护了）：<a href="https://nju-dl-co-ta.github.io/DLCOdoc/problems/">常见问题 · 课内实验操作说明</a></p>
+<p><strong>Logisim 缺乏友好的新手教程，在此推荐 <a href="https://soc.ustc.edu.cn/COD/other/logisim/">Logisim 教程 - COD Lab 2026</a></strong></p>
+<p>往届的助教也整理过一个帮助文档：<a href="https://nju-dl-co-ta.github.io/DLCOdoc/">课内实验操作说明</a></p>
+<blockquote>
+<p>网站使用的 theme 仓库现在 404 了，如果你觉得页面看上去比较难受，可以先用我 Fork 的网站：<a href="https://blog.nopthon.icu/DLCOdoc/">课内实验操作说明</a></p>
+</blockquote>
 <p>如果你已经是一个 Logisim 大神了（！？强强？！），<a href="https://www.cs.cornell.edu/courses/cs3410/2019sp/logisim/logisim_design.html">CS 3410 Design Guidelines for Logisim: Bad Practices to Avoid</a> 这个 Guideline 可能对你的大型工程构建有帮助</p>
 <p>除此以外，以下给出一些其他比较好用的小 Tips，或许可以减少在 Logisim 上消耗的时间：</p>
 <hr>
 <ul>
-<li>选择一个元件，在按住 <code>Ctrl</code> 或 <code>Shift</code> 的情况下，右键可以放置多个元件<ul>
+<li>
+<p></p><p style="color:#DAA520"><b>选择一个元件，在按住 <code>Ctrl</code> 或 <code>Shift</code> 的情况下，右键可以放置多个元件</b></p><p></p>
+<ul>
 <li>（比如说你要放置 <code>x</code> 个某元件，可以按住 <code>Shift</code> 右键放置 <code>x-1</code> 个元件，再松开 <code>Shift</code> 左键放置最后一个元件）</li>
 </ul>
 </li>
 </ul>
 <details class="abstract">
-<summary>动图</summary>
+<summary>动图（点击展开后播放）</summary>
 <p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/tip1.webp" data-desc-position="bottom"><img alt="tip1" src="../images/tip1.webp"></a></p>
 </details>
 <hr>
 <ul>
-<li>选中逻辑门再按下数字键可以切换逻辑门的<strong>输入位宽</strong>（在放置元件时该操作也有效，并且之后放置的门都遵循该设置）；同理可以改变的有“常量”的值（不是位宽）、复用器的<strong>选择端位宽</strong></li>
+<li><p style="color:#DAA520"><b>选中逻辑门再按下数字键可以切换逻辑门的<strong>输入位宽</strong>（在放置元件时该操作也有效，并且之后放置的门都遵循该设置）；同理可以改变的有“常量”的值（不是位宽）、复用器的<strong>选择端位宽</strong></b></p></li>
 </ul>
 <p>在额外按住 <code>Alt</code> 的情况下，数字键专门用于改变<strong>数据位宽</strong>，比如运算器、寄存器</p>
 <p>此外，你可以多选相同元件，然后批量修改位宽</p>
@@ -669,72 +702,85 @@
 <p>最好自己试一试，以防你分不清按不按住 <code>Alt</code> 分别修改的是什么值，以及理解这一条 Tip 在说什么</p>
 </blockquote>
 <details class="abstract">
-<summary>动图</summary>
+<summary>动图（点击展开后播放）</summary>
 <p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/tip2.webp" data-desc-position="bottom"><img alt="tip2" src="../images/tip2.webp"></a></p>
 </details>
 <hr>
 <ul>
-<li>放置输入输出引脚后（并且正确为引脚命名），点击 “工程→分析组合逻辑电路” ，可以通过编辑真值表 / 输入逻辑表达式的方式自动生成组合逻辑电路</li>
+<li>
+<p></p><p style="color:#DAA520"><b>放置输入输出引脚后（并且正确为引脚命名），点击 “工程→分析组合逻辑电路” ，可以通过编辑真值表 / 输入逻辑表达式的方式自动生成组合逻辑电路</b></p><p></p>
+<ul>
+<li><strong>注意到这会覆盖掉原本的电路</strong>，因此更好用的方式是：创建子电路，生成组合逻辑电路，然后封装成模块，进行整体调用</li>
+<li>可以参考 <a href="https://www.verilog.fun/pocc/week1-logisim-intro/#2-xxx">第一周：Logisim 入门 - Verilog Fun</a> 中的内容</li>
+<li>（说实话，对于 DLCO 实验来说，大概率用不到这个功能）</li>
+</ul>
+</li>
 </ul>
 <details class="abstract">
-<summary>动图</summary>
+<summary>动图（点击展开后播放）</summary>
 <p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/tip3.webp" data-desc-position="bottom"><img alt="tip3" src="../images/tip3.webp"></a></p>
 </details>
 <hr>
 <ul>
-<li>如果需要跨文件复制电路，可以点击 “工程→加载库→Logisim库” 导入.circ文件，以整体封装的形式使用电路，也可以在导入后对整个电路复制粘贴（如果你不希望后续的实验存在过多的子电路文件依赖，我建议对整个电路复制粘贴，否则使用封装电路更加简洁）</li>
+<li><p style="color:#DAA520"><b>如果需要跨文件复制电路，可以点击 “工程→加载库→Logisim库” 导入.circ文件，以整体封装的形式使用电路，也可以在导入后对整个电路复制粘贴（如果你不希望后续的实验存在过多的子电路文件依赖，我建议对整个电路复制粘贴，否则使用封装电路更加简洁）</b></p></li>
 </ul>
 <p>（这个就不给动图演示了，后续实验就会用到）</p>
 <hr>
 <ul>
-<li>编辑模式下鼠标中键点击某根电线（或者在戳模式下左键），会加粗与这根电线有连接的所有电线与节点，可以辅助判断有没有发生错误连线<ul>
+<li>
+<p></p><p style="color:#DAA520"><b>编辑模式下鼠标中键点击某根电线（或者在戳模式下左键），会加粗与这根电线有连接的所有电线与节点，可以辅助判断有没有发生错误连线</b></p><p></p>
+<ul>
 <li>（比如下面的例子中，同一逻辑门的两个输入不小心连接到了一起）</li>
 </ul>
 </li>
 </ul>
 <details class="abstract">
-<summary>动图</summary>
+<summary>动图（点击展开后播放）</summary>
 <p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/tip5.webp" data-desc-position="bottom"><img alt="tip5" src="../images/tip5.webp"></a></p>
 </details>
 <hr>
 <ul>
-<li>选中元件按方向键可以修改元件朝向（多选元件按方向键也有效，但是电线不会相应旋转）</li>
+<li><p style="color:#DAA520"><b>选中元件按方向键可以修改元件朝向（多选元件按方向键也有效，但是电线不会相应旋转）</b></p></li>
 </ul>
 <p>（没有动图的必要）</p>
 <hr>
 <ul>
-<li>一次 <code>Ctrl+D</code> 操作（复制+粘贴）可以代替一轮 <code>Ctrl+CV</code> 操作</li>
+<li><p style="color:#DAA520"><b>一次 <code>Ctrl+D</code> 操作（复制+粘贴）可以代替一轮 <code>Ctrl+CV</code> 操作</b></p></li>
 </ul>
 <details class="abstract">
-<summary>动图</summary>
+<summary>动图（点击展开后播放）</summary>
 <p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/tip7.webp" data-desc-position="bottom"><img alt="tip7" src="../images/tip7.webp"></a></p>
 </details>
 <hr>
 <ul>
-<li>Logisim 会主动连接端口，即使之后被分开也会尝试保持电路连接<ul>
+<li>
+<p></p><p style="color:#DAA520"><b>Logisim 会主动连接端口，即使之后被分开也会尝试保持电路连接</b></p><p></p>
+<ul>
 <li>如果你不希望自动连接，<strong>按住 Shift</strong> 并释放左键可以不自动连接（这在你不小心把电路缠在一块的时候很好用）</li>
 <li>在“偏好设置 → 电路编辑器”中，可以关闭自动连接的功能</li>
 </ul>
 </li>
 </ul>
 <details class="abstract">
-<summary>动图</summary>
+<summary>动图（点击展开后播放）</summary>
 <p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/tip8.webp" data-desc-position="bottom"><img alt="tip8" src="../images/tip8.webp"></a></p>
 </details>
 <hr>
 <ul>
-<li>按住 Alt 键，在编辑模式下可以不依赖元件放置电线<ul>
+<li>
+<p></p><p style="color:#DAA520"><b>按住 Alt 键，在编辑模式下可以不依赖元件放置电线</b></p><p></p>
+<ul>
 <li>并且你还会发现，按下 Alt 后对电线的处理逻辑不太一样（从新拉电线变成了移动最小段的电线）</li>
 </ul>
 </li>
 </ul>
 <details class="abstract">
-<summary>动图</summary>
+<summary>动图（点击展开后播放）</summary>
 <p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/tip10.webp" data-desc-position="bottom"><img alt="tip9" src="../images/tip10.webp"></a></p>
 </details>
 <hr>
 <ul>
-<li>这个软件其实是有 Graphics Acceleration 的，可以在这个地方设置图形加速</li>
+<li><p style="color:#DAA520"><b>这个软件其实是有 Graphics Acceleration 的，可以在这个地方设置图形加速</b></p></li>
 </ul>
 <details class="abstract">
 <summary>静图</summary>
@@ -742,7 +788,9 @@
 </details>
 <hr>
 <ul>
-<li>你可能很好奇，为什么我上面的截图中没有网格点<ul>
+<li>
+<p></p><p style="color:#DAA520"><b>你可能很好奇，为什么我上面的截图中没有网格点</b></p><p></p>
+<ul>
 <li>在这个非常不起眼的地方，可以切换网格点显示</li>
 </ul>
 </li>
