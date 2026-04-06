@@ -88,6 +88,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#or" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -324,6 +329,24 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab2
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -340,6 +363,34 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#or" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        常量 or 引脚
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -498,6 +549,25 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#or" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        常量 or 引脚
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -519,8 +589,18 @@
   <h1>Lab2</h1>
 
 <p>这里会将一些比较普遍、集中的问题汇总，如果这里什么都没写，说明<del>我忘记更新了</del></p>
+<p>（忽然意识到不同班级的 Lab 设计也是不一样的，这里的 Lab 设计是 yry 版本的）</p>
 <hr>
-<p>待更新</p>
+<h2 id="or">常量 or 引脚</h2>
+<p>你应该在实验的时候看过一句话：</p>
+<blockquote>
+<p>请勿修改引脚名称、电路名称及电路封装外观</p>
+</blockquote>
+<p>我们进入封装编辑模式，发现整个电路实现作为一个单独的元件显示。事实上，评测 OJ 进行评测的时候，就是调用这个封装后的元件，接输入输出进行测试</p>
+<p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/image-20260402213103099.png" data-desc-position="bottom"><img alt="image-20260402213103099" src="../images/image-20260402213103099.png"></a></p>
+<p>那么，为什么要提到常量和引脚呢？在完成部分电路的时候，你会发现某些输入是恒为定值的</p>
+<p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/image-20260402213326102.png" data-desc-position="bottom"><img alt="image-20260402213326102" src="../images/image-20260402213326102.png"></a></p>
+<p>如果你用输入引脚，并手动设置为 0/1，尝试代替常量的功能，那么本地测试通过的情况下，评测 OJ 会给出 Error 的结果，因为你引入了新的引脚，改变了封装外观（你新引入的引脚不会被评测 OJ 连接）</p>
 
 
 
