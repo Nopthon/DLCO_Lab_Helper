@@ -346,10 +346,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#logisim-tips" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Logisim Tips
+        如何写实验报告
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logisim-tricks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logisim 使用 Tricks
       
     </span>
   </a>
@@ -611,10 +622,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#logisim-tips" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Logisim Tips
+        如何写实验报告
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logisim-tricks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logisim 使用 Tricks
       
     </span>
   </a>
@@ -654,7 +676,6 @@
 
   <h1>Lab0</h1>
 
-<p>这里放一些 Logisim tricks</p>
 <h2 id="logisim">在本地搭建 Logisim 实验环境</h2>
 <p>常见的 Logisim 有三种版本：</p>
 <ol>
@@ -672,13 +693,25 @@
 <p>剩下的你都懂了</p>
 <p>注意这里还有两个重置功能，前者“重置环境”（应该）不会丢文件，后者是还原出厂设置</p>
 <hr>
-<h2 id="logisim-tips">Logisim Tips</h2>
+<h2 id="_2">如何写实验报告</h2>
+<p>内容请参考官方文档：<a href="https://nju-dl-co-ta.github.io/DLCOdoc/report/">怎样写实验报告 · 课内实验操作说明</a></p>
+<p>如果你看着无 CSS 页面难受，可以看我的 Fork 版本：<a href="https://blog.nopthon.icu/DLCOdoc/report/">怎样写实验报告 · 课内实验操作说明（Fork）</a></p>
+<hr>
+<h2 id="logisim-tricks">Logisim 使用 Tricks</h2>
+<ul>
+<li>
 <p><strong>Logisim 缺乏友好的新手教程，在此推荐 <a href="https://soc.ustc.edu.cn/COD/other/logisim/">Logisim 教程 - COD Lab 2026</a></strong></p>
+</li>
+<li>
 <p>往届的助教也整理过一个帮助文档：<a href="https://nju-dl-co-ta.github.io/DLCOdoc/">课内实验操作说明</a></p>
+</li>
+</ul>
 <blockquote>
 <p>网站使用的 theme 仓库现在 404 了，如果你觉得页面看上去比较难受，可以先用我 Fork 的网站：<a href="https://blog.nopthon.icu/DLCOdoc/">课内实验操作说明</a></p>
 </blockquote>
-<p>如果你已经是一个 Logisim 大神了（！？强强？！），<a href="https://www.cs.cornell.edu/courses/cs3410/2019sp/logisim/logisim_design.html">CS 3410 Design Guidelines for Logisim: Bad Practices to Avoid</a> 这个 Guideline 可能对你的大型工程构建有帮助</p>
+<ul>
+<li>如果你已经是一个 Logisim 大神了（！？强强？！），<a href="https://www.cs.cornell.edu/courses/cs3410/2019sp/logisim/logisim_design.html">CS 3410 Design Guidelines for Logisim: Bad Practices to Avoid</a> 这个 Guideline 可能对你的大型工程构建有帮助</li>
+</ul>
 <p>除此以外，以下给出一些其他比较好用的小 Tips，或许可以减少在 Logisim 上消耗的时间：</p>
 <hr>
 <ul>
@@ -692,6 +725,28 @@
 <details class="abstract">
 <summary>动图（点击展开后播放）</summary>
 <p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/tip1.webp" data-desc-position="bottom"><img alt="tip1" src="../images/tip1.webp"></a></p>
+</details>
+<hr>
+<ul>
+<li><p style="color:#DAA520"><b>一次 <code>Ctrl+D</code> 操作（复制+粘贴）可以代替一轮 <code>Ctrl+CV</code> 操作</b></p></li>
+</ul>
+<details class="abstract">
+<summary>动图（点击展开后播放）</summary>
+<p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/tip7.webp" data-desc-position="bottom"><img alt="tip7" src="../images/tip7.webp"></a></p>
+</details>
+<hr>
+<ul>
+<li>
+<p></p><p style="color:#DAA520"><b>Logisim 会主动连接端口，即使之后被分开也会尝试保持电路连接</b></p><p></p>
+<ul>
+<li>如果你不希望自动连接，<strong>按住 Shift</strong> 并释放左键可以不自动连接（这在你不小心把电路缠在一块的时候很好用）</li>
+<li>在“偏好设置 → 电路编辑器”中，可以关闭自动连接的功能</li>
+</ul>
+</li>
+</ul>
+<details class="abstract">
+<summary>动图（点击展开后播放）</summary>
+<p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/tip8.webp" data-desc-position="bottom"><img alt="tip8" src="../images/tip8.webp"></a></p>
 </details>
 <hr>
 <ul>
@@ -744,28 +799,6 @@
 <li><p style="color:#DAA520"><b>选中元件按方向键可以修改元件朝向（多选元件按方向键也有效，但是电线不会相应旋转）</b></p></li>
 </ul>
 <p>（没有动图的必要）</p>
-<hr>
-<ul>
-<li><p style="color:#DAA520"><b>一次 <code>Ctrl+D</code> 操作（复制+粘贴）可以代替一轮 <code>Ctrl+CV</code> 操作</b></p></li>
-</ul>
-<details class="abstract">
-<summary>动图（点击展开后播放）</summary>
-<p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/tip7.webp" data-desc-position="bottom"><img alt="tip7" src="../images/tip7.webp"></a></p>
-</details>
-<hr>
-<ul>
-<li>
-<p></p><p style="color:#DAA520"><b>Logisim 会主动连接端口，即使之后被分开也会尝试保持电路连接</b></p><p></p>
-<ul>
-<li>如果你不希望自动连接，<strong>按住 Shift</strong> 并释放左键可以不自动连接（这在你不小心把电路缠在一块的时候很好用）</li>
-<li>在“偏好设置 → 电路编辑器”中，可以关闭自动连接的功能</li>
-</ul>
-</li>
-</ul>
-<details class="abstract">
-<summary>动图（点击展开后播放）</summary>
-<p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/tip8.webp" data-desc-position="bottom"><img alt="tip8" src="../images/tip8.webp"></a></p>
-</details>
 <hr>
 <ul>
 <li>
