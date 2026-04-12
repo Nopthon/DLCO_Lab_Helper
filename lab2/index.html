@@ -389,17 +389,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        异或门
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#mux" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -411,7 +400,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         分线器
@@ -600,17 +589,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        异或门
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#mux" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -622,7 +600,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         分线器
@@ -666,17 +644,12 @@
 <p>那么，为什么要提到常量和引脚呢？在完成部分电路的时候，你会发现某些输入是恒为定值的</p>
 <p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/image-20260402213326102.png" data-desc-position="bottom"><img alt="image-20260402213326102" src="../images/image-20260402213326102.png"></a></p>
 <p>如果你用输入引脚，并手动设置为 0/1，尝试代替常量的功能，那么本地测试通过的情况下，评测 OJ 会给出 Error 的结果，因为你引入了新的引脚，改变了封装外观（你新引入的引脚不会被评测 OJ 连接）</p>
-<h2 id="_1">异或门</h2>
-<p>只是想提醒你，Logisim 的异或门逻辑非常神秘</p>
-<p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/image-20260413015405224.png" data-desc-position="bottom"><img alt="image-20260413015405224" src="../images/image-20260413015405224.png"></a></p>
-<p>没错，Logisim 异或门的默认多输入行为是，当且仅当一个输入为 1 时，输出 1</p>
-<p>对于大多数人来说，记得修改异或门的多输入行为，否则你会遇到非预期行为</p>
 <h2 id="mux">MUX 的输入端</h2>
-<p>也只是想提醒你，实验 PDF 文件中给的原理图中：</p>
+<p>只是想提醒你，实验 PDF 文件中给的原理图中：</p>
 <p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/image-20260413014047986.png" data-desc-position="bottom"><img alt="image-20260413014047986" src="../images/image-20260413014047986.png"></a></p>
 <p>和 Logisim 中 MUX 的输入是反的</p>
 <p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/image-20260413014139245.png" data-desc-position="bottom"><img alt="image-20260413014139245" src="../images/image-20260413014139245.png"></a></p>
-<h2 id="_2">分线器</h2>
+<h2 id="_1">分线器</h2>
 <p>依旧是桶形移位器的实验，为了将多位输入拆分，我们需要分线器</p>
 <p>依旧只是想提醒你，分线器并不是只能逐位分线，它比你想象的更加自由</p>
 <p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/image-20260413014306439.png" data-desc-position="bottom"><img alt="image-20260413014306439" src="../images/image-20260413014306439.png"></a></p>
