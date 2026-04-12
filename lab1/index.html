@@ -372,6 +372,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        探针
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -588,6 +599,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        探针
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -611,7 +633,6 @@
   <h1>Lab1</h1>
 
 <p>这里会将一些比较普遍、集中的问题汇总，如果这里什么都没写，说明<del>我忘记更新了</del></p>
-<p>（忽然意识到不同班级的 Lab 设计也是不一样的，这里的 Lab 设计是 6 Labs 版本的）</p>
 <hr>
 <h2 id="_1">三极管</h2>
 <p>在 Lab1.2 和 Lab1.4 中，有可能会遇到三极管相关的问题，比如：</p>
@@ -624,17 +645,27 @@
 <p>图一：通常约定 NMOS 的源极在下方，PMOS 的源极在上方。可以简单的解释为：NMOS 的源极通常（向下）接地，而 PMOS 管的源极通常（向上）接电源</p>
 <p>然而 Logisim 的默认方向不是这样的，对于 NMOS 管你需要转一下</p>
 </blockquote>
+<hr>
 <p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/image-20260327182522236.png" data-desc-position="bottom"><img alt="image-20260327182522236" src="../images/image-20260327182522236.png"></a></p>
 <blockquote>
-<p>图二：如果源极统一接电源的话，三极管的实际通电情况</p>
+<p>图二：如果源极都接电源的话，三极管的实际通电情况</p>
 <p>Logisim 中，<strong>输入端为方形接口，输出端为圆形接口</strong></p>
 <p><strong>三极管的箭头表示源极 -&gt; 漏极的方向</strong></p>
-<p>（当然 NMOS 管的源极一般是接地的，<u>而不是像图中这样接电源的</u>，这个图是作为参考的）</p>
+<p>（<u>当然 NMOS 管的源极一般是接地的，而不是像图中这样接电源的</u>，这个图是作为参考的）</p>
 </blockquote>
 <p>另外 Logisim 的三极管代码层面上很可能就是个开关，如果要分析电压什么的那还是算了吧</p>
 <h2 id="_2">输入引脚和隧道</h2>
 <p>输入引脚是提供有效信号的；隧道的作用是“无线传输”，通过标签名来识别同源信号</p>
 <p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/image-20260327202700644.png" data-desc-position="bottom"><img alt="image-20260327202700644" src="../images/image-20260327202700644.png"></a></p>
+<h2 id="_3">探针</h2>
+<p>静态冒险检测时，需要用到探针。当你初次上手的时候，你可能会发现：</p>
+<p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/image-20260413013128055.png" data-desc-position="bottom"><img alt="image-20260413013128055" src="../images/image-20260413013128055.png"></a></p>
+<p>啊嘞，怎么输出了个 <code>-1</code>？</p>
+<p>不妨看看探针的设置：</p>
+<p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/image-20260413013249824.png" data-desc-position="bottom"><img alt="image-20260413013249824" src="../images/image-20260413013249824.png"></a></p>
+<p>这里默认使用有符号十进制，我们知道有符号数的最高位是符号位，对于 <code>0b1</code> 这个数字，按照二进制补码的解释，确实就是 <code>-1</code>。将进制切换到无符号十进制，显示的就是 <code>1</code> 了</p>
+<p>如果不用 1 位输入，会更明白：</p>
+<p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/image-20260413013622598.png" data-desc-position="bottom"><img alt="image-20260413013622598" src="../images/image-20260413013622598.png"></a></p>
 
 
 
