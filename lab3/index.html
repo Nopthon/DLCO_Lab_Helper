@@ -88,6 +88,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -351,6 +356,24 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab3
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -367,6 +390,34 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        导入子电路
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -498,6 +549,25 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        导入子电路
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -520,7 +590,13 @@
 
 <p>这里会将一些比较普遍、集中的问题汇总，如果这里什么都没写，说明<del>我忘记更新了</del></p>
 <hr>
-<p>待更新</p>
+<h2 id="_1">导入子电路</h2>
+<p>在这里可以导入 Logisim 文件，把之前实验中实现的电路整体打包导入</p>
+<p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/aff9e0120d20a2375f07cd2837e3335a.png" data-desc-position="bottom"><img alt="aff9e0120d20a2375f07cd2837e3335a" src="../images/aff9e0120d20a2375f07cd2837e3335a.png"></a></p>
+<p>这里需要注意一点的是：一旦你通过这种方式导入了 Logisim 库（子电路），<u>这个被导入的 Logisim 文件将会成为这个电路文件的外部依赖</u></p>
+<p>如果你不希望存在依赖关系，则可以在当前文件内新建子电路，将外部引用的电路复制粘贴到新建的文件中</p>
+<p>之后，卸载刚刚导入的 Logisim 文件，从而解除文件依赖</p>
+<p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/image-20260415221956042.png" data-desc-position="bottom"><img alt="image-20260415221956042" src="../images/image-20260415221956042.png"></a></p>
 
 
 
