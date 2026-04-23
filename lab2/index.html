@@ -389,6 +389,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        未知的封装问题
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mux" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -400,7 +411,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
         分线器
@@ -589,6 +600,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        未知的封装问题
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mux" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -600,7 +622,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
         分线器
@@ -643,20 +665,31 @@
 <p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/image-20260402213103099.png" data-desc-position="bottom"><img alt="image-20260402213103099" src="../images/image-20260402213103099.png"></a></p>
 <p>那么，为什么要提到常量和引脚呢？在完成部分电路的时候，你会发现某些输入是恒为定值的</p>
 <p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/image-20260402213326102.png" data-desc-position="bottom"><img alt="image-20260402213326102" src="../images/image-20260402213326102.png"></a></p>
-<p>如果你用输入引脚，并手动设置为 0/1，尝试代替常量的功能，那么本地测试通过的情况下，评测 OJ 会给出 Error 的结果，因为你引入了新的引脚，改变了封装外观（你新引入的引脚不会被评测 OJ 连接）</p>
+<p>如果你用输入引脚，并手动设置为 0/1，尝试代替常量的功能，那么本地测试通过的情况下，评测 OJ 会给出 Error 的结果：</p>
+<ul>
+<li><strong>你引入了新的引脚，改变了封装外观（你新引入的引脚不会被评测 OJ 连接，相当于蓝色的不定态，而不是你在本地设置好的 0/1）</strong></li>
+</ul>
+<h2 id="_1">未知的封装问题</h2>
+<p>书接上文，在实验中，有时会遇到这种情况：可以确定自己的电路实现正确，但是评测结果非常奇怪</p>
+<p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/image-20260423174012866.png" data-desc-position="bottom"><img alt="image-20260423174012866" src="../images/image-20260423174012866.png"></a></p>
+<p>如图，这大概率又是封装要背锅了。cslab 的评测机对封装元件的接口是<strong>硬编码相对位置</strong>的，因此需要确保封装引脚的相对位置（那个绿色的圆圈是元件的锚点）是正确的</p>
+<p>以 Lab2.1 为例，左边是错误的，右边是正确的。不清楚为什么引脚会乱掉，<del>只能受着了</del></p>
+<p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/image-20260423174825258.png" data-desc-position="bottom"><img alt="image-20260423174825258" src="../images/image-20260423174825258.png"></a></p>
+<p>因此再次提醒：不要让 main 电路的封装引脚有任何变化（子电路是可以的）</p>
 <h2 id="mux">MUX 的输入端</h2>
 <p>只是想提醒你，实验 PDF 文件中给的原理图中：</p>
 <p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/image-20260413014047986.png" data-desc-position="bottom"><img alt="image-20260413014047986" src="../images/image-20260413014047986.png"></a></p>
 <p>和 Logisim 中 MUX 的输入是反的</p>
 <p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/image-20260413014139245.png" data-desc-position="bottom"><img alt="image-20260413014139245" src="../images/image-20260413014139245.png"></a></p>
-<h2 id="_1">分线器</h2>
+<h2 id="_2">分线器</h2>
 <p>依旧是桶形移位器的实验，为了将多位输入拆分，我们需要分线器</p>
 <p>依旧只是想提醒你，分线器并不是只能逐位分线，它比你想象的更加自由</p>
 <p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/image-20260413014306439.png" data-desc-position="bottom"><img alt="image-20260413014306439" src="../images/image-20260413014306439.png"></a></p>
 <p>以助教本人的连线为例：</p>
 <p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/image-20260413015011181.png" data-desc-position="bottom"><img alt="image-20260413015011181" src="../images/image-20260413015011181.png"></a></p>
 <p>我很难想象如果分线器是逐位分出的，电路会是什么样的🤦</p>
-<p>哦对了，这个图里你还能看到扩展器这个元件，有了这个元件你就不需要用分线器进行神秘操作了。注意扩展器分零扩展和符号扩展</p>
+<p>此外，分线器可以反向使用，即“集线器”</p>
+<p><strong>哦对了，这个图里你还能看到扩展器这个元件，有了这个元件你就不需要用分线器进行神秘操作了。注意扩展器分零扩展和符号扩展</strong></p>
 
 
 
