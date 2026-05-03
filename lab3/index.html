@@ -415,6 +415,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        时钟沿
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -620,6 +631,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        时钟沿
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -647,10 +669,17 @@
 <h2 id="_1">导入子电路</h2>
 <p>在这里可以导入 Logisim 文件，把之前实验中实现的电路整体打包导入</p>
 <p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/aff9e0120d20a2375f07cd2837e3335a.png" data-desc-position="bottom"><img alt="aff9e0120d20a2375f07cd2837e3335a" src="../images/aff9e0120d20a2375f07cd2837e3335a.png"></a></p>
-<p>这里需要注意一点的是：一旦你通过这种方式导入了 Logisim 库（子电路），<u>这个被导入的 Logisim 文件将会成为这个电路文件的外部依赖</u></p>
+<p>这里需要注意一点的是：一旦你通过这种方式导入了 Logisim 库（子电路），<u>这个被导入的 Logisim 文件将会成为这个电路文件的外部依赖</u>（也就是说，你以后打开这个 Logisim 文件时，也得确保被导入的依赖文件可以被找到）</p>
 <p>如果你不希望存在依赖关系，则可以在当前文件内新建子电路，将外部引用的电路复制粘贴到新建的文件中</p>
 <p>之后，卸载刚刚导入的 Logisim 文件，从而解除文件依赖</p>
 <p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/image-20260415221956042.png" data-desc-position="bottom"><img alt="image-20260415221956042" src="../images/image-20260415221956042.png"></a></p>
+<h2 id="_2">时钟沿</h2>
+<p>实验三“同步时序部件设计”引入了 CLK 时钟，我们以 Lab 3.1 为例</p>
+<p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/image-20260430191733749.png" data-desc-position="bottom"><img alt="image-20260430191733749" src="../images/image-20260430191733749.png"></a></p>
+<p>这里，CLK 接非门，D 触发器为下降沿触发（遵循原理图的内容），你可以得到正确的输出结果</p>
+<p>这里提一下 CLK 时钟沿设置错误时的输出，最显著的特征是 <code>Cnt</code> 参数会多输出一轮。如图为 Lab 3.1 的错误实现：</p>
+<p><a class="glightbox" data-type="image" data-width="80%" data-height="auto" href="../images/image-20260430193346818.png" data-desc-position="bottom"><img alt="image-20260430193346818" src="../images/image-20260430193346818.png"></a></p>
+<p>因为我也不知道 Educoder 平台的 OJ 评测实现是什么样的，所以<del>只能受着</del></p>
 
 
 
